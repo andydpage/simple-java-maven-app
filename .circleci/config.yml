@@ -12,7 +12,7 @@ jobs:
       - run:
           command: ls target/surefire-reports
       - store_test_results:
-          path: target/surefire-reports
+          path: target/surefire-reports/*.xml
 
 workflows:
   pipeline:
