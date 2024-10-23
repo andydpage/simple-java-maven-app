@@ -1,0 +1,14 @@
+inputSet:
+  name: Build_simple_java_maven_app_1729675533327-pr-trigger-input-set
+  identifier: Build_simple_java_maven_app_1729675533327prtriggerinputset
+  orgIdentifier: default
+  projectIdentifier: CI_Testing
+  pipeline:
+    identifier: Build_simple_java_maven_app_1729675533327
+    properties:
+      ci:
+        codebase:
+          build:
+            type: PR
+            spec:
+              number: <+trigger.prNumber>
