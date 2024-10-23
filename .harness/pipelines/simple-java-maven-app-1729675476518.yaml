@@ -21,12 +21,12 @@ pipeline:
             steps:
               - step:
                   identifier: echo
-                  name: echo
+                  name: Build
                   spec:
                     connectorRef: account.andydpage_dockerhub
-                    image: maven:latest
+                    image: maven:3.8.7
                     shell: Sh
-                    command: echo hello world
+                    command: mvn -B -DskipTests clean package
                   timeout: ""
                   type: Run
           platform:
@@ -36,3 +36,4 @@ pipeline:
             type: Cloud
             spec: {}
         type: CI
+        description: ""
